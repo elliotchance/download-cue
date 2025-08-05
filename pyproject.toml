@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "download-cue"
+version = "1.0.0"
+description = "Download cue sheets for audio files"
+authors = [
+  { name="Elliot Chance", email="elliotchance@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "MIT"}
+
+dependencies = [
+  "requests",
+  "beautifulsoup4",
+  "mutagen"
+]
+
+[project.scripts]
+download-cue = "download_cue.cli:main"
